@@ -55,7 +55,7 @@
 											<td>{{ $paciente->nombre }}</td>
 											<td>{{ $paciente->apellido }}</td>
 											<td>{{ $paciente->edad }}</td>
-											<td>{{ $paciente->genero_id }}</td>
+											<td>{{ $paciente->genero_id->nombre }}</td>
 											<td>{{ $paciente->telefono }}</td>
 											<td>{{ $paciente->direccion }}</td>
 											<td>{{ $paciente->fecha_nacimiento }}</td>
