@@ -34,12 +34,13 @@
                             <table class="table table-striped table-hover">
                                 <thead class="thead">
                                     <tr>
-                                        <th>No</th>
+                                        <th>ID</th>
                                         
-										<th>Medico Id</th>
-										<th>Paciente Id</th>
+										<th>Paciente a Tratar</th>
+										<th>Medico Encargado</th>
 										<th>Motivo</th>
-										<th>Fecha A</th>
+										<th>Fecha de Atención</th>
+										<th>Fecha del Registro</th>
 
                                         <th></th>
                                     </tr>
@@ -49,10 +50,11 @@
                                         <tr>
                                             <td>{{ ++$i }}</td>
                                             
-											<td>{{ $cita->medico_id }}</td>
-											<td>{{ $cita->paciente_id }}</td>
+											<td>{{ $cita->paciente->nombre }}</td>
+											<td>{{ $cita->medico->nombre }}</td>
 											<td>{{ $cita->motivo }}</td>
 											<td>{{ $cita->fecha_a }}</td>
+                                            <td>{{ $cita->created_at}}</td>
 
                                             <td>
                                                 <form action="{{ route('citas.destroy',$cita->id) }}" method="POST">

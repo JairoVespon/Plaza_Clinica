@@ -13,7 +13,7 @@
         </div>
         <div class="form-group">
             {{ Form::label('edad') }}
-            {{ Form::text('edad', $paciente->edad, ['class' => 'form-control' . ($errors->has('edad') ? ' is-invalid' : ''), 'placeholder' => 'Ingrese su Edad']) }}
+            {{ Form::text('edad', $paciente->edad, ['class' => 'form-control' . ($errors->has('edad') ? ' is-invalid' : ''), 'placeholder' => 'Digité su Edad']) }}
             {!! $errors->first('edad', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
@@ -23,7 +23,7 @@
         </div>
         <div class="form-group">
             {{ Form::label('teléfono') }}
-            {{ Form::text('telefono', $paciente->telefono, ['class' => 'form-control' . ($errors->has('telefono') ? ' is-invalid' : ''), 'placeholder' => 'Ingrese su Número Telefónico']) }}
+            {{ Form::text('telefono', $paciente->telefono, ['class' => 'form-control' . ($errors->has('telefono') ? ' is-invalid' : ''), 'placeholder' => 'Digité su Número Telefónico']) }}
             {!! $errors->first('telefono', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">

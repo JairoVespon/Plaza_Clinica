@@ -3,7 +3,7 @@
         
         <div class="form-group">
             {{ Form::label('nombre completo') }}
-            {{ Form::text('nombre', $medico->nombre, ['class' => 'form-control' . ($errors->has('nombre') ? ' is-invalid' : ''), 'placeholder' => 'Nombre']) }}
+            {{ Form::text('nombre', $medico->nombre, ['class' => 'form-control' . ($errors->has('nombre') ? ' is-invalid' : ''), 'placeholder' => 'Ingrese su Nombre']) }}
             {!! $errors->first('nombre', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
@@ -18,12 +18,12 @@
         </div>
         <div class="form-group">
             {{ Form::label('teléfono') }}
-            {{ Form::text('telefono', $medico->telefono, ['class' => 'form-control' . ($errors->has('telefono') ? ' is-invalid' : ''), 'placeholder' => 'Telefono']) }}
+            {{ Form::text('telefono', $medico->telefono, ['class' => 'form-control' . ($errors->has('telefono') ? ' is-invalid' : ''), 'placeholder' => 'Digité su Teléfono']) }}
             {!! $errors->first('telefono', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
             {{ Form::label('clínica') }}
-            {{ Form::select('clinica_id', $clinica -> pluck('nombre', 'id'), $medico->clinica_id, ['class' => 'form-control' . ($errors->has('clinica_id') ? ' is-invalid' : ''), 'placeholder' => 'Clinica Id']) }}
+            {{ Form::select('clinica_id', $clinica -> pluck('nombre', 'id'), $medico->clinica_id, ['class' => 'form-control' . ($errors->has('clinica_id') ? ' is-invalid' : ''), 'placeholder' => 'Seleccione donde Trabaja']) }}
             {!! $errors->first('clinica_id', '<div class="invalid-feedback">:message</div>') !!}
         </div>
 

@@ -34,11 +34,11 @@
                             <table class="table table-striped table-hover">
                                 <thead class="thead">
                                     <tr>
-                                        <th>No</th>
+                                        <th>ID</th>
                                         
 										<th>Nombre</th>
-										<th>Telefono</th>
-										<th>Direccion</th>
+										<th>Teléfono</th>
+										<th>Dirección</th>
 
                                         <th></th>
                                     </tr>

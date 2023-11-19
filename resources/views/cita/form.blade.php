@@ -2,23 +2,23 @@
     <div class="box-body">
         
         <div class="form-group">
-            {{ Form::label('medico_id') }}
-            {{ Form::text('medico_id', $cita->medico_id, ['class' => 'form-control' . ($errors->has('medico_id') ? ' is-invalid' : ''), 'placeholder' => 'Medico Id']) }}
-            {!! $errors->first('medico_id', '<div class="invalid-feedback">:message</div>') !!}
-        </div>
-        <div class="form-group">
-            {{ Form::label('paciente_id') }}
-            {{ Form::text('paciente_id', $cita->paciente_id, ['class' => 'form-control' . ($errors->has('paciente_id') ? ' is-invalid' : ''), 'placeholder' => 'Paciente Id']) }}
+            {{ Form::label('paciente') }}
+            {{ Form::select('paciente_id', $paciente -> pluck('nombre', 'id'), $cita->paciente_id, ['class' => 'form-control' . ($errors->has('paciente_id') ? ' is-invalid' : ''), 'placeholder' => 'Seleccione el Paciente a Tratar']) }}
             {!! $errors->first('paciente_id', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
+            {{ Form::label('medico') }}
+            {{ Form::select('medico_id', $medico -> pluck('nombre', 'id'), $cita->medico_id, ['class' => 'form-control' . ($errors->has('medico_id') ? ' is-invalid' : ''), 'placeholder' => 'Seleccione el Médico Encargado']) }}
+            {!! $errors->first('medico_id', '<div class="invalid-feedback">:message</div>') !!}
+        </div>
+        <div class="form-group">
             {{ Form::label('motivo') }}
-            {{ Form::text('motivo', $cita->motivo, ['class' => 'form-control' . ($errors->has('motivo') ? ' is-invalid' : ''), 'placeholder' => 'Motivo']) }}
+            {{ Form::text('motivo', $cita->motivo, ['class' => 'form-control' . ($errors->has('motivo') ? ' is-invalid' : ''), 'placeholder' => 'Describa su Motivo de Consulta']) }}
             {!! $errors->first('motivo', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('fecha_a') }}
-            {{ Form::text('fecha_a', $cita->fecha_a, ['class' => 'form-control' . ($errors->has('fecha_a') ? ' is-invalid' : ''), 'placeholder' => 'Fecha A']) }}
+            {{ Form::label('fecha de atención') }}
+            {{ Form::date('fecha_a', $cita->fecha_a, ['class' => 'form-control' . ($errors->has('fecha_a') ? ' is-invalid' : '')]) }}
             {!! $errors->first('fecha_a', '<div class="invalid-feedback">:message</div>') !!}
         </div>
 

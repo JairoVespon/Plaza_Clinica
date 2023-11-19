@@ -34,13 +34,13 @@
                             <table class="table table-striped table-hover">
                                 <thead class="thead">
                                     <tr>
-                                        <th>No</th>
+                                        <th>ID</th>
                                         
 										<th>Nombre</th>
-										<th>Genero Id</th>
-										<th>Especialidad Id</th>
-										<th>Telefono</th>
-										<th>Clinica Id</th>
+										<th>Genero</th>
+										<th>Especialidad</th>
+										<th>Teléfono</th>
+										<th>Clinica</th>
 
                                         <th></th>
                                     </tr>
@@ -51,10 +51,10 @@
                                             <td>{{ ++$i }}</td>
                                             
 											<td>{{ $medico->nombre }}</td>
-											<td>{{ $medico->genero_id }}</td>
-											<td>{{ $medico->especialidad_id }}</td>
+											<td>{{ $medico->genero->nombre }}</td>
+											<td>{{ $medico->especialidad->nombre }}</td>
 											<td>{{ $medico->telefono }}</td>
-											<td>{{ $medico->clinica_id }}</td>
+											<td>{{ $medico->clinica->nombre }}</td>
 
                                             <td>
                                                 <form action="{{ route('medicos.destroy',$medico->id) }}" method="POST">

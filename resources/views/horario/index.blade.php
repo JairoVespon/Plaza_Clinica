@@ -34,12 +34,12 @@
                             <table class="table table-striped table-hover">
                                 <thead class="thead">
                                     <tr>
-                                        <th>No</th>
+                                        <th>ID</th>
                                         
-										<th>Medico Id</th>
-										<th>Dia Trabajo</th>
-										<th>Hora E</th>
-										<th>Hora S</th>
+										<th>Medico</th>
+										<th>Dia de Trabajo</th>
+										<th>Hora de Entrada</th>
+										<th>Hora de Salida</th>
 
                                         <th></th>
                                     </tr>
@@ -49,8 +49,8 @@
                                         <tr>
                                             <td>{{ ++$i }}</td>
                                             
-											<td>{{ $horario->medico_id }}</td>
-											<td>{{ $horario->dia_trabajo }}</td>
+											<td>{{ $horario->medico->nombre }}</td>
+											<td>{{ $horario->dia->nombre }}</td>
 											<td>{{ $horario->hora_e }}</td>
 											<td>{{ $horario->hora_s }}</td>
 
