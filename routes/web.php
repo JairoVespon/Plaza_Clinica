@@ -16,6 +16,10 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+Route::get('/pantalla', function () {
+    return view('pantalla');
+})->name('inicio')->middleware('auth');
+
 Route::resource('pacientes', PacienteController::class)->middleware('auth');
 Route::resource('clinicas', ClinicaController::class)->middleware('auth');
 Route::resource('medicos', MedicoController::class)->middleware('auth');
