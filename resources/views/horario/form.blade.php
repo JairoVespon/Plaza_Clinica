@@ -21,8 +21,8 @@
             {{ Form::time('hora_s', $horario->hora_s, ['class' => 'form-control' . ($errors->has('hora_s') ? ' is-invalid' : '')]) }}
             {!! $errors->first('hora_s', '<div class="invalid-feedback">:message</div>') !!}
         </div>
-
     </div>
+    <br>
     <div class="box-footer mt20">
         <button type="submit" class="btn btn-primary">{{ __('Submit') }}</button>
     </div>

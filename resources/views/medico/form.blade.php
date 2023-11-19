@@ -26,8 +26,8 @@
             {{ Form::select('clinica_id', $clinica -> pluck('nombre', 'id'), $medico->clinica_id, ['class' => 'form-control' . ($errors->has('clinica_id') ? ' is-invalid' : ''), 'placeholder' => 'Seleccione donde Trabaja']) }}
             {!! $errors->first('clinica_id', '<div class="invalid-feedback">:message</div>') !!}
         </div>
-
     </div>
+    <br>
     <div class="box-footer mt20">
         <button type="submit" class="btn btn-primary">{{ __('Submit') }}</button>
     </div>
