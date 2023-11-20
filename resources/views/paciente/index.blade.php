@@ -17,7 +17,7 @@
                             </span>
 
                               <div class="float-right">
-                                <a href="{{ url('/reportes') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
+                                <a href="{{ url('/reportes1') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
                                   {{ __('Imprimir PDF') }}
                                 </a>
                                 <a href="{{ route('pacientes.create') }}" class="btn btn-success btn-sm float-right"  data-placement="left">
