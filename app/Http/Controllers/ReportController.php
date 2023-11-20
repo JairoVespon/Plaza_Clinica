@@ -37,11 +37,11 @@ class ReportController extends Controller
     {
         // Extraer todas las clinicas
         $data = Clinica::select(
-            "clinica.id",
-            "clinica.nombre",
-            "clinica.telefono",
-            "clinica.direccion"
-        );
+            "clinicas.id",
+            "clinicas.nombre",
+            "clinicas.telefono",
+            "clinicas.direccion"
+        )->get();
 
         // Cargar vista del reporte con la data
         $pdf = Pdf::loadView('/reports/reportCli', compact('data'));
@@ -73,7 +73,7 @@ class ReportController extends Controller
             "dias.nombre as dia",
             "horarios.hora_e",
             "horarios.hora_s",
-        ) -> join("medicos", "medicos.id", "=", "horarios.medico_id") -> get();
+        ) -> join("medicos", "medicos.id", "=", "horarios.medico_id") -> join("dias", "dias.id", "=", "horarios.dia_trabajo") -> get();
 
         // Cargar vista del reporte con la data
         $pdf = Pdf::loadView('/reports/reportHor', compact('data'));
@@ -92,7 +92,7 @@ class ReportController extends Controller
         ) -> join("pacientes", "pacientes.id", "=", "citas.paciente_id") -> join("medicos", "medicos.id", "=", "citas.medico_id") -> get();
 
         // Cargar vista del reporte con la data
-        $pdf = Pdf::loadView('/reports/reportCli', compact('data'));
+        $pdf = Pdf::loadView('/reports/reportCit', compact('data'));
         return $pdf->stream('clinica.pdf');
     }
 }

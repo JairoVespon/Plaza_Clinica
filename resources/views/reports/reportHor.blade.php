@@ -32,8 +32,8 @@
             @foreach ($data as $item)
             <tr>
                 <td style="background-color: bisque">{{$item['id']}}</td>
-                <td>{{$item['nombre']}}</td>
-                <td>{{$item['dia']}} años</td>
+                <td>{{$item['medico']}}</td>
+                <td>{{$item['dia']}}</td>
                 <td>{{$item['hora_e']}}</td>
                 <td>{{$item['hora_s']}}</td>
             </tr>
