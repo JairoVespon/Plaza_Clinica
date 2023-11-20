@@ -15,6 +15,9 @@
                     @endif
 
                     {{ __('You are logged in!') }}
+                    
+                    <br><br>
+                    <a href="{{ url('/pantalla') }}" class="btn btn-success">Ok</a>
                 </div>
             </div>
         </div>

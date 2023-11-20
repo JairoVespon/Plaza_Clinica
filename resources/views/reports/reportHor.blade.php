@@ -6,14 +6,22 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Reporte de Horarios</title>
         <style>
+            body {
+                background-color: #632432; font-family: Arial; 
+            }
             table {
-                width: 100%; font-size: 18px; border:1px solid black; border-collapse: collapse;
+                background-color: white; text-align: left;
+                border-collapse: collapse; width: 100%;
             }
-            th {
-                background-color: burlywood; border:1px solid black;
+            th, td {
+                padding: 10px;
             }
-            td {
-                border:1px solid black;
+            thead {
+                background-color: #246355; border-bottom: solid 5px #0F362D;
+                color: white;
+            }
+            tr:nth-child(even){
+                background-color: #ddd;
             }
         </style>
     </head>
@@ -21,13 +29,13 @@
         <h1 align="center">Listado de Horarios</h1>
         <hr><br>
         <table>
-            <tr>
+            <thead>
                 <th>Código</th>
                 <th>Médico</th>
                 <th>Dia de Trabajo</th>
                 <th>Hora de Entrada</th>
                 <th>Hora de Salida</th>
-            </tr>
+            </thead>
 
             @foreach ($data as $item)
             <tr>

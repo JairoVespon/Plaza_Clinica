@@ -1,9 +1,5 @@
 @extends('layouts.app')
 
-@section('template_title')
-    Inicio
-@endsection
-
 @section('content')
 <style>
     .card {
@@ -31,24 +27,24 @@
             <div class="col-md-7">
                 <div class="card">
                     <div class="card-body">
-                        <h1 class="text-center" style="color: #3498db;">Bienvenido a la Clinica La Única</h1>
+                        <h1 class="text-center" style="color: #3498db;">Bienvenido a Clinica La Única</h1>
                         <hr>
                         <h2 class="text-center" style="color: #555;">A cuál de nuestras plataformas desea ingresar?</h2>
                         <hr>
                         <h3 style="color: #333;">Ingresar Paciente</h3>
-                        <a href="{{ url('/pacientes/create') }}" class="btn btn-primary btn-sm">Ingresar<a>
+                        <a href="{{ url('/pacientes/create') }}" class="btn btn-primary btn-sm">Acceder<a>
                         <hr>
-                        <h3 style="color: #333;">Formulario Clinicas</h3>
-                        <a href="{{ url('/clinicas') }}" class="btn btn-primary btn-sm">Ingresar<a>
+                        <h3 style="color: #333;">Ingresar Clinicas</h3>
+                        <a href="{{ url('/clinicas/create') }}" class="btn btn-primary btn-sm">Acceder<a>
                         <hr>
-                        <h3 style="color: #333;">Formulario Medicos</h3>
-                        <a href="{{ url('/medicos') }}" class="btn btn-primary btn-sm">Ingresar<a>
+                        <h3 style="color: #333;">Ingresar Medicos</h3>
+                        <a href="{{ url('/medicos/create') }}" class="btn btn-primary btn-sm">Acceder<a>
                         <hr>
-                        <h3 style="color: #333;">Formulario Citas</h3>
-                        <a href="{{ url('/citas') }}" class="btn btn-primary btn-sm">Ingresar<a>
+                        <h3 style="color: #333;">Ingresar Citas</h3>
+                        <a href="{{ url('/citas/create') }}" class="btn btn-primary btn-sm">Acceder<a>
                         <hr>
-                        <h3 style="color: #333;">Formulario Horarios</h3>
-                        <a href="{{ url('/horarios') }}" class="btn btn-primary btn-sm">Ingresar<a>
+                        <h3 style="color: #333;">Ingresar Horarios</h3>
+                        <a href="{{ url('/horarios/create') }}" class="btn btn-primary btn-sm">Acceder<a>
                     </div>
                 </div>
             </div>

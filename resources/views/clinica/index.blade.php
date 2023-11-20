@@ -20,7 +20,7 @@
                                 <a href="{{ route('clinicas.create') }}" class="btn btn-danger btn-sm float-right"  data-placement="left">
                                   {{ __('Create New') }}
                                 </a>
-                                <a href="{{ url('/reporte') }}" class="btn btn-info btn-sm float-right"  data-placement="left">
+                                <a href="{{ url('/reportes') }}" class="btn btn-info btn-sm float-right"  data-placement="left">
                                     {{ __('Imprimir PDF') }}
                                   </a>
                               </div>

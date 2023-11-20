@@ -30,7 +30,7 @@ class ReportController extends Controller
 
         // Cargar vista del reporte con la data
         $pdf = Pdf::loadView('/reports/reportPac', compact('data'));
-        return $pdf->stream('paciente.pdf');
+        return $pdf->stream('RegistroPacientes.pdf');
     }
 
     public function reporteCli()
@@ -45,7 +45,7 @@ class ReportController extends Controller
 
         // Cargar vista del reporte con la data
         $pdf = Pdf::loadView('/reports/reportCli', compact('data'));
-        return $pdf->stream('clinica.pdf');
+        return $pdf->stream('RegistroClinicas.pdf');
     }
     
     public function reporteMed()
@@ -62,7 +62,7 @@ class ReportController extends Controller
 
         // Cargar vista del reporte con la data
         $pdf = Pdf::loadView('/reports/reportMed', compact('data'));
-        return $pdf->stream('medico.pdf');
+        return $pdf->stream('RegistroMédicos.pdf');
     }
     public function reporteHor()
     {
@@ -77,7 +77,7 @@ class ReportController extends Controller
 
         // Cargar vista del reporte con la data
         $pdf = Pdf::loadView('/reports/reportHor', compact('data'));
-        return $pdf->stream('horario.pdf');
+        return $pdf->stream('RegistroHorarios.pdf');
     }
     public function reporteCit()
     {
@@ -93,6 +93,6 @@ class ReportController extends Controller
 
         // Cargar vista del reporte con la data
         $pdf = Pdf::loadView('/reports/reportCit', compact('data'));
-        return $pdf->stream('clinica.pdf');
+        return $pdf->stream('RegistroClinicas.pdf');
     }
 }
