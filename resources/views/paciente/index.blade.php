@@ -17,10 +17,10 @@
                             </span>
 
                               <div class="float-right">
-                                <a href="{{ url('/reportes') }}" class="btn btn-info btn-sm float-right"  data-placement="left">
+                                <a href="{{ url('/reportes') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
                                   {{ __('Imprimir PDF') }}
                                 </a>
-                                <a href="{{ route('pacientes.create') }}" class="btn btn-danger btn-sm float-right"  data-placement="left">
+                                <a href="{{ route('pacientes.create') }}" class="btn btn-success btn-sm float-right"  data-placement="left">
                                   {{ __('Agregar Nuevo') }}
                                 </a>
                               </div>
