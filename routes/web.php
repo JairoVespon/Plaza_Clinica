@@ -28,8 +28,8 @@ Route::resource('horarios', HorarioController::class)->middleware('auth');
 Route::resource('citas', CitaController::class)->middleware('auth');
 
 // Rutas para reportes
-Route::get('/reportes1', [ReportController::class, 'reportePac']);
-Route::get('/reportes2', [ReportController::class, 'reporteCli']);
-Route::get('/reportes3', [ReportController::class, 'reporteMed']);
-Route::get('/reportes4', [ReportController::class, 'reporteHor']);
-Route::get('/reportes5', [ReportController::class, 'reporteCit']);
+Route::get('/reportPac', [ReportController::class, 'reportePac']);
+Route::get('/reportCli', [ReportController::class, 'reporteCli']);
+Route::get('/reportMed', [ReportController::class, 'reporteMed']);
+Route::get('/reportHor', [ReportController::class, 'reporteHor']);
+Route::get('/reportCit', [ReportController::class, 'reporteCit']);

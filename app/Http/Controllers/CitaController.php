@@ -48,6 +48,13 @@ class CitaController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'paciente_id' => 'required',
+            'medico_id' => 'required',
+            'motivo' => 'required',
+            'fecha_a' => 'required',
+        ]);
+        
         request()->validate(Cita::$rules);
 
         $cita = Cita::create($request->all());
@@ -93,6 +100,13 @@ class CitaController extends Controller
      */
     public function update(Request $request, Cita $cita)
     {
+        $request->validate([
+            'paciente_id' => 'required',
+            'medico_id' => 'required',
+            'motivo' => 'required',
+            'fecha_a' => 'required',
+        ]);
+        
         request()->validate(Cita::$rules);
 
         $cita->update($request->all());

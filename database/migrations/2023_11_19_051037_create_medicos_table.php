@@ -17,10 +17,8 @@ return new class extends Migration
             $table->unsignedBigInteger('genero_id');
             $table->unsignedBigInteger('especialidad_id');
             $table->bigInteger('telefono');
-            $table->unsignedBigInteger('clinica_id');
             $table->timestamps();
 
-            $table->foreign('clinica_id')->references('id')->on('clinicas');
             $table->foreign('especialidad_id')->references('id')->on('especialidades');
             $table->foreign('genero_id')->references('id')->on('generos');
         });

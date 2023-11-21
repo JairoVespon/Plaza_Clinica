@@ -48,6 +48,13 @@ class HorarioController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'medico_id' => 'required',
+            'dia_trabajo' => 'required',
+            'hora_e' => 'required',
+            'hora_s' => 'required',
+        ]);
+
         request()->validate(Horario::$rules);
 
         $horario = Horario::create($request->all());
@@ -93,6 +100,13 @@ class HorarioController extends Controller
      */
     public function update(Request $request, Horario $horario)
     {
+        $request->validate([
+            'medico_id' => 'required',
+            'dia_trabajo' => 'required',
+            'hora_e' => 'required',
+            'hora_s' => 'required',
+        ]);
+        
         request()->validate(Horario::$rules);
 
         $horario->update($request->all());

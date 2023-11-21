@@ -50,6 +50,12 @@ class MedicoController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'nombre' => 'required|alpha',
+            'genero_id' => 'required',
+            'especialidad_id' => 'required',
+            'telefono' => 'required|numeric',
+        ]);
         request()->validate(Medico::$rules);
 
         $medico = Medico::create($request->all());
@@ -96,6 +102,13 @@ class MedicoController extends Controller
      */
     public function update(Request $request, Medico $medico)
     {
+        $request->validate([
+            'nombre' => 'required|alpha',
+            'genero_id' => 'required',
+            'especialidad_id' => 'required',
+            'telefono' => 'required|numeric',
+        ]);
+        
         request()->validate(Medico::$rules);
 
         $medico->update($request->all());

@@ -43,6 +43,12 @@ class ClinicaController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'nombre' => 'required',
+            'telefono' => 'required|numeric',
+            'direccion' => 'required',
+        ]);
+
         request()->validate(Clinica::$rules);
 
         $clinica = Clinica::create($request->all());
@@ -86,6 +92,12 @@ class ClinicaController extends Controller
      */
     public function update(Request $request, Clinica $clinica)
     {
+        $request->validate([
+            'nombre' => 'required',
+            'telefono' => 'required|numeric',
+            'direccion' => 'required',
+        ]);
+        
         request()->validate(Clinica::$rules);
 
         $clinica->update($request->all());
